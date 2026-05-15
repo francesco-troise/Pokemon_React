@@ -13,7 +13,7 @@ export default function Footer() {
             © {currentYear} — PokéApp Project
           </small>
           <div className="text-muted" style={{ fontSize: '0.7rem' }}>
-            Dati forniti da <a href="https://pokeapi.co/" target="_blank" rel="noreferrer" className="text-decoration-none">PokeAPI</a>
+            Dati forniti da <a href="https://pokeapi.co/" target="_blank" className="text-decoration-none">PokeAPI</a>
           </div>
         </div>
 

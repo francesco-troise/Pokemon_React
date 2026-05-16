@@ -1,5 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import LayoutDefault from "./Layouts/LayoutDefault";
 import Home from "./pages/Home";
 import AllPokemon from "./pages/AllPokemon";
 import ShowPokemon from "./pages/ShowPokemon";
@@ -16,10 +17,10 @@ function App() {
         <Route index element={<Home />} />
         <Route path="pokemon" element={<AllPokemon />} />
         <Route path="pokemon/:name" element={<ShowPokemon />} />
-        <Route path="generazioni" element={<AllGenerations />} />
-        <Route path="generazioni/:id" element={<ShowGeneration />} />
-        <Route path="tipi" element={<AllTypes />} />
-        <Route path="tipi/:type" element={<ShowType />} />
+        <Route path="generations" element={<AllGenerations />} />
+        <Route path="generations/:id" element={<ShowGeneration />} />
+        <Route path="types" element={<AllTypes />} />
+        <Route path="types/:type" element={<ShowType />} />
       </Route>
     </Routes>
   </BrowserRouter>

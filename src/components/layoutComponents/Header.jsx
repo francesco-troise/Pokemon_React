@@ -4,39 +4,57 @@ import Logo_pkm from '../../assets/Logo_pkm.jpg';
 export default function Header() {
   return (
     <header className="container-fluid py-4">
-      <nav className="d-flex justify-content-between align-items-center border border-dark rounded-pill p-2 px-4 bg-white shadow-sm">
+      <nav
+        className="d-flex justify-content-between align-items-center border border-dark border-2 rounded-pill p-3 px-4 shadow-sm"
+        style={{ backgroundColor: '#e3f2fd' }} // Azzurrino chiaro (stile Bootstrap light-blue)
+      >
 
+        {/* LOGO - Ingrandito a 65px */}
         <Link to="/" className="d-flex align-items-center">
           <img
             src={Logo_pkm}
             alt="Logo Pokemon"
-            className="rounded-pill"
-            style={{ height: '45px', width: 'auto' }}
+            className="rounded-circle border border-dark" // Cerchio con bordo per farlo risaltare
+            style={{ height: '65px', width: '65px', objectFit: 'cover' }}
           />
         </Link>
 
-        <span className="d-none d-md-block text-uppercase fw-bold ls-1 small border-start border-end border-dark px-4">
+        {/* SLOGAN */}
+        <span className="d-none d-lg-block text-uppercase fw-bold small border-start border-end border-dark px-4 mx-2 text-dark">
           Gotta catch 'em all!
         </span>
 
-        <ul className="d-flex align-items-center list-unstyled m-0 gap-2">
+        {/* NAVIGATION */}
+        <ul className="d-flex align-items-center list-unstyled m-0 gap-2 text-nowrap">
           <li>
-            <NavLink to="/"className="btn btn-outline-dark">
+            <NavLink
+              to="/"
+              className="btn btn-outline-dark"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/pokemon" className="btn btn-outline-dark">
+            <NavLink
+              to="/pokemon"
+              className="btn btn-outline-dark"
+            >
               Pokédex
             </NavLink>
           </li>
           <li>
-            <NavLink to="/generazioni" className="btn btn-outline-dark">
+            <NavLink
+              to="/generations"
+              className="btn btn-outline-dark"
+            >
               Generazioni
             </NavLink>
           </li>
           <li>
-            <NavLink to="/tipi" className="btn btn-outline-dark">
+            <NavLink
+              to="/types"
+              className="btn btn-outline-dark"
+            >
               Tipologie
             </NavLink>
           </li>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import PokemonCard from '../components/Card';
+import PokemonCard from '../components/PokemonCard';
 
 export default function ShowPokemon() {
     const { id } = useParams();
@@ -66,7 +66,7 @@ export default function ShowPokemon() {
                         <div className="mt-3">
                             <h6 className="text-muted">Debolezze e Resistenze</h6>
                             <p className="small text-secondary">
-                                Questo Pokémon appartiene ai tipi: {pokemon.types.map(t => t.name).join(', ')}.
+                                Questo Pokémon appartiene ai tipi: {pokemon.types.map(type => type.name).join(', ')}.
                             </p>
                         </div>
                     </div>

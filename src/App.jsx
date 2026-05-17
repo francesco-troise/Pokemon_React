@@ -20,7 +20,7 @@ function App() {
         <Route path="generations" element={<AllGenerations />} />
         <Route path="generations/:id" element={<ShowGeneration />} />
         <Route path="types" element={<AllTypes />} />
-        <Route path="types/:type" element={<ShowType />} />
+        <Route path="types/:id" element={<ShowType />} />
       </Route>
     </Routes>
   </BrowserRouter>

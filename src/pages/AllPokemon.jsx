@@ -17,8 +17,8 @@ export default function AllPokemon() {
 
     const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
-    const fetchPokemon = (currentFilters = {}) => {
-        axios.get(`${API_BASE_URL}/pokemon`, { params: currentFilters })
+    const fetchPokemon = (filters = {}) => {
+        axios.get(`${API_BASE_URL}/pokemon`, { params: filters })
             .then(res => {
                 setPokemon(res.data.data);
             })

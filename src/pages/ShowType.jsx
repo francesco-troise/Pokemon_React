@@ -54,7 +54,7 @@ export default function ShowType() {
                                 <img
                                     src={`${BASE_URL}types_img/${imageName}`}
                                     alt={type.name}
-                                    style={{ width: '100px', height: '100px', objectFit: 'contain' }}
+                                    style={{ width: '200px', height: '200px', objectFit: 'contain' }}
                                 />
                             </div>
                         </div>

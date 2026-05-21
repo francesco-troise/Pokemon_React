@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function ShowGeneration() {
-    const { id } = useParams(); // Recupera l'ID dalla rotta definita in App.jsx
+    const { id } = useParams();
     const [generation, setGeneration] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -13,8 +13,8 @@ export default function ShowGeneration() {
         setLoading(true);
         axios.get(`http://127.0.0.1:8000/api/generations/${id}`)
             .then(res => {
-                // Prendi i dati dalla risposta (gestendo sia res.data che res.data.data)
-                setGeneration(res.data.data || res.data);
+
+                setGeneration(res.data.data);
                 setLoading(false);
             })
             .catch(err => {

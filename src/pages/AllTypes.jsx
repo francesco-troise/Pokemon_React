@@ -6,7 +6,7 @@ export default function AllType() {
     const [types, setTypes] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Stato per il termine di ricerca
+    // Stato per il type cercato
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
@@ -26,7 +26,6 @@ export default function AllType() {
             });
     };
 
-    // Filtriamo i tipi in base a quello che l'utente scrive nell'input
     const filteredTypes = types.filter(type =>
         type.name.toLowerCase().includes(searchTerm.toLowerCase())
     );

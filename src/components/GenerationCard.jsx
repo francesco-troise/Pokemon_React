@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 export default function GenerationCard({ gen }) {
-    // Definiamo la costante per l'URL di base dello storage di Laravel
     const BASE_URL_IMG = "http://127.0.0.1:8000/storage/";
 
     return (
@@ -10,13 +9,10 @@ export default function GenerationCard({ gen }) {
                 {/* Contenitore Immagine */}
                 <div style={{ height: '200px', overflow: 'hidden' }}>
                     <img
-                        // Costruiamo il percorso usando la cartella specifica vista nel filesystem
                         src={`${BASE_URL_IMG}${gen.region_image}`}
                         className="card-img-top w-100 h-100"
                         alt={gen.region}
                         style={{ objectFit: 'cover' }}
-                        // Fallback in caso l'immagine non venga trovata
-                        onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Immagine+Regione'; }}
                     />
                 </div>
 

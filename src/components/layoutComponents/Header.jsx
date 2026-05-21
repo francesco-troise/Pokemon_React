@@ -6,15 +6,15 @@ export default function Header() {
     <header className="container-fluid py-4">
       <nav
         className="d-flex justify-content-between align-items-center border border-dark border-2 rounded-pill p-3 px-4 shadow-sm"
-        style={{ backgroundColor: '#e3f2fd' }} // Azzurrino chiaro (stile Bootstrap light-blue)
+        style={{ backgroundColor: '#e3f2fd' }}
       >
 
-        {/* LOGO - Ingrandito a 65px */}
+        {/* LOGO */}
         <Link to="/" className="d-flex align-items-center">
           <img
             src={Logo_pkm}
             alt="Logo Pokemon"
-            className="rounded-circle border border-dark" // Cerchio con bordo per farlo risaltare
+            className="rounded-circle border border-dark"
             style={{ height: '65px', width: '65px', objectFit: 'cover' }}
           />
         </Link>
